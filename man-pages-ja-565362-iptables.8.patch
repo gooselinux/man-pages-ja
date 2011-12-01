@@ -1,0 +1,163 @@
+--- man-pages-ja-20100115/manual/iptables/man8/iptables.8.orig	2010-01-15 00:07:09.000000000 +0900
++++ man-pages-ja-20100115/manual/iptables/man8/iptables.8	2010-02-02 18:39:23.909802568 +0900
+@@ -259,7 +259,7 @@
+ 以下のパラメータは (add, delete, insert, 
+ replace, append コマンドで用いられて) ルールの仕様を決める。
+ .TP
+-.BR "-p, --protocol " "[!] \fIprotocol\fP"
++.BR "[!] -p, --protocol " "\fIprotocol\fP"
+ ルールで使われるプロトコル、またはチェックされるパケットのプロトコル。
+ 指定できるプロトコルは、
+ .IR tcp ,
+@@ -279,7 +279,7 @@
+ は全てのプロトコルとマッチし、
+ このオプションが省略された際のデフォルトである。
+ .TP
+-.BR "-s, --source " "[!] \fIaddress\fP[/\fImask\fP]"
++.BR "[!] -s, --source " "\fIaddress\fP[/\fImask\fP]"
+ 送信元の指定。
+ .I address
+ はホスト名
+@@ -299,7 +299,7 @@
+ .B --src
+ は、このオプションの別名である。
+ .TP
+-.BR "-d, --destination " "[!] \fIaddress\fP[/\fImask\fP]"
++.BR "[!] -d, --destination " "\fIaddress\fP[/\fImask\fP]"
+ 送信先の指定。
+ 書式の詳しい説明については、
+ .B -s
+@@ -321,7 +321,7 @@
+ ルールにマッチしてもパケットの行方に何も影響しないが、
+ ルールのカウンタは 1 つ加算される。
+ .TP
+-.BR "-i, --in-interface " "[!] \fIname\fP"
++.BR "[!] -i, --in-interface " "\fIname\fP"
+ パケットを受信することになるインターフェース名
+ .RB ( INPUT ,
+ .BR FORWARD ,
+@@ -334,7 +334,7 @@
+ このオプションが省略された場合、
+ 任意のインターフェース名にマッチする。
+ .TP
+-.BR "-o, --out-interface " "[!] \fIname\fP"
++.BR "[!] -o, --out-interface " "\fIname\fP"
+ パケットを送信することになるインターフェース名
+ .RB ( FORWARD ,
+ .BR OUTPUT , 
+@@ -434,7 +434,7 @@
+ .SS ah
+ このモジュールは IPSec パケットの AH ヘッダーの SPI 値にマッチする。 
+ .TP
+-.BR "--ahspi " "[!] \fIspi\fP[:\fIspi\fP]"
++.BR "[!] --ahspi " "\fIspi\fP[:\fIspi\fP]"
+ .SS conntrack
+ このモジュールは、接続追跡 (connection tracking) と組み合わせて用いると、
+ "state" マッチよりもさらに多くの、
+@@ -467,16 +467,16 @@
+ .BI "--ctproto " "proto"
+ (名前または数値で) 指定されたプロトコルにマッチする。
+ .TP
+-.BI "--ctorigsrc " "[!] \fIaddress\fP[/\fImask\fP]"
++.BI "[!] --ctorigsrc " "\fIaddress\fP[/\fImask\fP]"
+ 書き換え前の送信元アドレスにマッチする。
+ .TP
+-.BI "--ctorigdst " "[!] \fIaddress\fP[/\fImask\fP]"
++.BI "[!] --ctorigdst " "\fIaddress\fP[/\fImask\fP]"
+ 書き換え前の宛先アドレスにマッチする。
+ .TP
+-.BI "--ctreplsrc " "[!] \fIaddress\fP[/\fImask\fP]"
++.BI "[!] --ctreplsrc " "\fIaddress\fP[/\fImask\fP]"
+ 応答の送信元アドレスにマッチする。
+ .TP
+-.BI "--ctrepldst " "[!] \fIaddress\fB[/\fImask\fP]"
++.BI "[!] --ctrepldst " "\fIaddress\fB[/\fImask\fP]"
+ 応答の宛先アドレスにマッチする。
+ .TP
+ .BI "--ctstatus " "[\fINONE|EXPECTED|SEEN_REPLY|ASSURED\fP][,...]"
+@@ -499,7 +499,7 @@
+ .SS esp
+ このモジュールは IPSec パケットの ESP ヘッダーの SPI 値にマッチする。 
+ .TP
+-.BR "--espspi " "[!] \fIspi\fP[:\fIspi\fP]"
++.BR "[!] --espspi " "\fIspi\fP[:\fIspi\fP]"
+ .SS helper
+ このモジュールは、指定された接続追跡ヘルパーモジュールに
+ 関連するパケットにマッチする。
+@@ -520,7 +520,7 @@
+ この拡張は `--protocol icmp' が指定された場合にロードされ、
+ 以下のオプションが提供される:
+ .TP
+-.BR "--icmp-type " "[!] \fItypename\fP"
++.BR "[!] --icmp-type " "\fItypename\fP"
+ 数値の ICMP タイプ、またはコマンド
+ .nf
+  iptables -p icmp -h
+@@ -553,7 +553,7 @@
+ デフォルトは 5 である。
+ .SS mac
+ .TP
+-.BR "--mac-source " "[!] \fIaddress\fP"
++.BR "[!] --mac-source " "\fIaddress\fP"
+ 送信元 MAC アドレスにマッチする。
+ .I address
+ は XX:XX:XX:XX:XX:XX という形式でなければならない。
+@@ -701,7 +701,7 @@
+ これらの拡張は `--protocol tcp' が指定され場合にロードされ、
+ 以下のオプションが提供される:
+ .TP
+-.BR "--source-port " "[!] \fIport\fP[:\fIport\fP]"
++.BR "[!] --source-port " "\fIport\fP[:\fIport\fP]"
+ 送信元ポートまたはポート範囲の指定。
+ サービス名またはポート番号を指定できる。
+ .IR port : port
+@@ -714,13 +714,13 @@
+ .B --sport
+ は、このオプションの便利な別名である。
+ .TP
+-.BR "--destination-port " "[!] \fIport\fP[:\fIport\fP]"
++.BR "[!] --destination-port " "\fIport\fP[:\fIport\fP]"
+ 送信先ポートまたはポート範囲の指定。
+ フラグ
+ .B --dport
+ は、このオプションの便利な別名である。
+ .TP
+-.BR "--tcp-flags " "[!] \fImask\fP \fIcomp\fP"
++.BR "[!] --tcp-flags " "\fImask\fP \fIcomp\fP"
+ TCP フラグが指定されたものと等しい場合にマッチする。
+ 第 1 引き数は評価対象とするフラグで、コンマ区切りのリストである。
+ 第 2 引き数はこのうち設定されていなければならないフラグで、
+@@ -746,7 +746,7 @@
+ SYN ビットがクリアされ ACK と RST ビットが設定されている
+ TCP パケットにのみマッチする。
+ .TP
+-.BR "--tcp-option " "[!] \fInumber\fP"
++.BR "[!] --tcp-option " "\fInumber\fP"
+ TCP オプションが設定されている場合にマッチする。
+ .TP
+ .BR "--mss " "\fIvalue\fP[:\fIvalue\fP]"
+@@ -773,13 +773,13 @@
+ これらの拡張は `--protocol udp' が指定された場合にロードされ、
+ 以下のオプションが提供される:
+ .TP
+-.BR "--source-port " "[!] \fIport\fP[:\fIport\fP]"
++.BR "[!] --source-port " "\fIport\fP[:\fIport\fP]"
+ 送信元ポートまたはポート範囲の指定。
+ 詳細は TCP 拡張の
+ .B --source-port
+ オプションの説明を参照すること。
+ .TP
+-.BR "--destination-port " "[!] \fIport\fP[:\fIport\fP]"
++.BR "[!] --destination-port " "\fIport\fP[:\fIport\fP]"
+ 送信先ポートまたはポート範囲の指定。
+ 詳細は TCP 拡張の
+ .B --destination-port
+@@ -883,7 +883,7 @@
+ テーブルのみで有効である。
+ 例えば、iproute2 と組み合わせて使うことができる。
+ .TP
+-.BI "--set-mark " "mark"
++.BI "--set-mark " "\fIvalue\fP[\fB/\fP\fImask\fP]"
+ .SS MASQUERADE
+ このターゲットは
+ .B nat

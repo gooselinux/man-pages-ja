@@ -1,0 +1,43 @@
+diff -ruN man-pages-ja-20070915.orig/script/pkgs.list man-pages-ja-20070915/script/pkgs.list
+--- man-pages-ja-20070915.orig/script/pkgs.list	2006-06-13 01:25:37.000000000 +0900
++++ man-pages-ja-20070915/script/pkgs.list	2007-09-27 16:30:06.000000000 +0900
+@@ -65,6 +65,7 @@
+ flex		Y
+ glibc-linuxthreads	Y
+ fort77		Y
++hdparm		Y
+ ipfwadm		Y
+ ipchains	Y
+ iptables	Y
+@@ -77,6 +78,7 @@
+ man-db		N
+ microcode_ctl	Y
+ mirrordir	Y
++module-init-tools	Y
+ modutils	Y
+ mpg123		Y
+ ncftp		Y
+@@ -89,6 +91,7 @@
+ pciutils	Y
+ pcmcia-cs	Y
+ procinfo	Y
++procmail	Y
+ procps		Y
+ ppp		Y
+ psmisc		Y
+@@ -96,6 +99,7 @@
+ reiserfsprogs	Y
+ rdate		Y
+ rp-pppoe	Y
++rpm		Y
+ rssh		Y
+ sendmail	Y
+ setserial	Y
+@@ -107,6 +111,7 @@
+ ucd-snmp	Y
+ util-linux	Y
+ uudeview	Y
++vsftpd		Y
+ xinetd		Y
+ yp-tools	Y
+ ypbind		N

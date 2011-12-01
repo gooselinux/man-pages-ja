@@ -1,0 +1,13 @@
+diff -ruN man-pages-ja-20060815.orig/manual/util-linux/man5/nfs.5 man-pages-ja-20060815/manual/util-linux/man5/nfs.5
+--- man-pages-ja-20060815.orig/manual/util-linux/man5/nfs.5	2006-08-15 00:07:26.000000000 +0900
++++ man-pages-ja-20060815/manual/util-linux/man5/nfs.5	2006-09-05 16:46:27.000000000 +0900
+@@ -215,3 +215,9 @@
+ .P
+ umount コマンドは、 NFS ファイルシステムがアンマウントされたときにサー
+ バに通知するべきである。
++.P
++ファイルディスクリプタによって参照された NFS ファイルシステム上にあるファイルのチェック(
++.BR fcntl
++や
++.BR ioctl
++などの関数)は、たとえ noac が使用されたとしても、カーネル内での一貫性チェックが不足しているため、誤った結果を返すことがある。

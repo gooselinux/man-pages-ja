@@ -1,0 +1,12 @@
+diff -pruN man-pages-ja-20090215.orig/manual/GNU_bash/man1/bash.1 man-pages-ja-20090215/manual/GNU_bash/man1/bash.1
+--- man-pages-ja-20090215.orig/manual/GNU_bash/man1/bash.1	2009-02-15 00:06:46.000000000 +0900
++++ man-pages-ja-20090215/manual/GNU_bash/man1/bash.1	2009-02-25 18:10:58.000000000 +0900
+@@ -5490,7 +5490,7 @@ 直前の置換を繰り返します。
+ .B bash
+ が
+ .I posix モード
+-で動作していれば、
++で動作していなければ、
+ .SM
+ .B PATH
+ 中でファイルを見つけられなかった場合には、

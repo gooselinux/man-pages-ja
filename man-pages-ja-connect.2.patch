@@ -1,0 +1,21 @@
+diff -pruN man-pages-ja-20090215.orig/manual/LDP_man-pages/man2/connect.2 man-pages-ja-20090215/manual/LDP_man-pages/man2/connect.2
+--- man-pages-ja-20090215.orig/manual/LDP_man-pages/man2/connect.2	2009-02-15 00:06:50.000000000 +0900
++++ man-pages-ja-20090215/manual/LDP_man-pages/man2/connect.2	2009-02-25 17:47:02.000000000 +0900
+@@ -163,15 +163,8 @@ Unix ¥É¥á¥¤¥ó¥½¥±¥Ã¥È¤Ï¥Ñ¥¹Ì¾¤Ç¼±ÊÌ¤µ¤ì¤
+ .I sa_family
+ ¥Õ¥£¡¼¥ë¥É¤¬Àµ¤·¤¤¥¢¥É¥ì¥¹¡¦¥Õ¥¡¥ß¥ê¡¼¤Ç¤Ï¤Ê¤¤¡£
+ .TP
+-.B EAGAIN
+-»ÈÍÑ²ÄÇ½¤Ê¥í¡¼¥«¥ë¤Î¥Ý¡¼¥È¤¬¤Ê¤¤¤«¡¢
+-¥ë¡¼¥Æ¥£¥ó¥°¥­¥ã¥Ã¥·¥å¤Ë½½Ê¬¤Ê¥¨¥ó¥È¥ê¤¬¤Ê¤¤¡£
+-.B AF_INET
+-¤Î¾ì¹ç¤Ë¡¢¥í¡¼¥«¥ë¥Ý¡¼¥È¤Î¿ô¤òÁý¤ä¤¹ÊýË¡¤Ë¤Ä¤¤¤Æ¤Ï¡¢
+-.BR ip (7)
+-¤Î
+-.I /proc/sys/net/ipv4/ip_local_port_range
+-¤ÎÀâÌÀ¤ò»²¾È¤Î¤³¤È¡£
++.B EADDRNOTAVAIL
++Â¸ºß¤·¤Ê¤¤¥½¥±¥Ã¥È¤¬Í×µá¤µ¤ì¤¿¡£¤Þ¤¿¤ÏÍ×µá¤µ¤ì¤¿¥½¡¼¥¹¥¢¥É¥ì¥¹¤¬¥í¡¼¥«¥ë¤Ç¤Ê¤¤¡£
+ .TP
+ .B EALREADY
+ ¥½¥±¥Ã¥È¤¬ÈóÄä»ß (non-blocking) ¤ËÀßÄê¤µ¤ì¤Æ¤ª¤ê¡¢

@@ -1,0 +1,88 @@
+diff -ruN man-pages-ja-20060815.orig/manual/at/man1/at.1 man-pages-ja-20060815/manual/at/man1/at.1
+--- man-pages-ja-20060815.orig/manual/at/man1/at.1	2006-08-15 00:07:17.000000000 +0900
++++ man-pages-ja-20060815/manual/at/man1/at.1	2006-09-05 18:23:40.000000000 +0900
+@@ -30,21 +30,52 @@
+ .IR queue ]
+ .RB [ -f
+ .IR file ]
+-.RB [ -mldbv ]
++.RB [ -m ]
++.RB [ -v ]
+ .B TIME
+ .br
++.B at
++.RB [ -V ]
++.RB [ -q 
++.IR queue ]
++.RB [ -f
++.IR file ]
++.RB [ -m ]
++.RB [ -v ] -t
++.IR time_arg
++.br
+ .B "at -c"
+ .I job
+ .RI [ job... ]
+ .br
++.B "at -l"
++.RB [ -V ]
++.RB [ -q 
++.IR queue ]
++.br
+ .B atq
+ .RB [ -V ]
+ .RB [ -q
+ .IR queue ]
+-.RB [ -v ]
++.br
++.B "at -d"
++.RB [ -V ]
++.RB [ -q 
++.IR queue ]
++.I job
++.RI [ job... ]
++.br
++.B "at -r"
++.RB [ -V ]
++.RB [ -q 
++.IR queue ]
++.I job
++.RI [ job... ]
+ .br
+ .B atrm
+ .RB [ -V ]
++.RB [ -q 
++.IR queue ]
+ .I job
+ .RI [ job... ]
+ .br
+@@ -242,7 +273,7 @@
+ .B atq
+ と同じ働きをする。
+ .TP
+-.B \-d
++.B \-d, \-r
+ .B atrm
+ と同じ働きをする。
+ .BR atq
+@@ -253,6 +284,20 @@
+ 時刻は "1997-02-20 14:50" のような形式で表示される。ただし環境変数
+ .B POSIXLY_CORRECT
+ が指定されている場合は "Thu Feb 20 14:50:00 1996" のようになる。
++.TP 8
++.BI \-v
++ジョブが実行される時間を表示する。
++.TP 8
++.BI \-t " time_arg"
++.I time_arg
++オプションで指定した時間にジョブを実行させるようにする。
++.I time_arg
++の書式は
++.B touch(1)
++の
++.RB \-t
++.I time
++オプションと同じでなければならない。
+ .TP
+ .B
+ \-c

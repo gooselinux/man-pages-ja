@@ -1,0 +1,11 @@
+--- man-pages-ja-20060815.orig/manual/LDP_man-pages/man7/ip.7	2006-08-15 00:07:11.000000000 +0900
++++ man-pages-ja-20060815/manual/LDP_man-pages/man7/ip.7	2009-11-13 18:56:28.000000000 +0900
+@@ -662,7 +662,7 @@
+ と同様に
+ .I ip_mreqn
+ または
+-.I ip_mreq
++.I in_addr
+ 構造体である。
+ .IP
+ 不正なソケットオプションが渡されると、

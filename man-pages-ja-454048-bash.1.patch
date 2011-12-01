@@ -1,0 +1,12 @@
+diff -pruN man-pages-ja-20060815.orig/manual/GNU_bash/man1/bash.1 man-pages-ja-20060815/manual/GNU_bash/man1/bash.1
+--- man-pages-ja-20060815.orig/manual/GNU_bash/man1/bash.1	2006-08-15 00:07:04.000000000 +0900
++++ man-pages-ja-20060815/manual/GNU_bash/man1/bash.1	2009-04-30 19:09:31.000000000 +0900
+@@ -6138,7 +6138,7 @@ 長い形式のリスト表示を行います。
+ .B \e\e
+ バックスラッシュ
+ .TP
+-.B \e\fInnn\fP
++.B \e0\fInnn\fP
+ ASCII コードの 8 進値が \fInnn\fP である文字 (1 文字につき数字 3 桁)。
+ .TP
+ .B \ex\fInnn\fP
